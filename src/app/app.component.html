@@ -1,0 +1,15 @@
+<div class="container m-auto w-50">
+  <div class="mt-4 calculator-container">
+    <app-investment-calculator
+      (investmentDetails)="onInvestmentDetails($event)"
+    />
+  </div>
+  <br />
+  <div>
+    @if (calculateResults.length){
+    <app-results [displayData]="calculateResults" />
+    } @else {
+    <p class="text-primary text-center fw-bold">Add values to check investment results!</p>
+    }
+  </div>
+</div>
